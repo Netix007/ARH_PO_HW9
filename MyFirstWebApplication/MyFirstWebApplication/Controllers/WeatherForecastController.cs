@@ -33,6 +33,7 @@ namespace MyFirstWebApplication.Controllers
         [HttpDelete("delete")]
         public IActionResult Delete(DateTime date)
         {
+            _weatherForecastModel.Delete(date);
             return Ok();
         }
 

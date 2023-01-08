@@ -30,10 +30,19 @@
 
         }
 
-        public void Delete()
+        public void Delete(DateTime date)
         {
             //TODO: ДОМАШНЯЯ РАБОТА
             // Доработать метод Delete на упровне модели данных и контроллера.
+
+            for (int i = 0; i < _list.Count; i++)
+            {
+                if (_list[i].Date == date)
+                {
+                    _list.RemoveAt(i);
+                    break;
+                }
+            }
         }
 
         public List<WeatherForecast> GetAll(DateTime dateFrom, DateTime dateTo)
